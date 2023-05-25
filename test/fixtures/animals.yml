@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  dateofbirth: 2023-05-25
+  age: 1
+  characteristic: MyString
+  food: MyString
+  category: one
+
+two:
+  name: MyString
+  dateofbirth: 2023-05-25
+  age: 1
+  characteristic: MyString
+  food: MyString
+  category: two

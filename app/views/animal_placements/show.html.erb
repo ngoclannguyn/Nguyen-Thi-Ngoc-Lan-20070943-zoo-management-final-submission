@@ -1,0 +1,25 @@
+<div class="max-w-3xl mx-auto px-4">
+  <div class="flex items-center justify-between">
+    <h1 class="flex-1 font-bold text-3xl">Animal_placement</h1>
+
+    <div class="flex-wrap lg:flex items-center lg:space-x-3">
+      <%= link_to animal_placements_path, class: button_class(theme: "transparent") do %>
+      All Animal_placements
+      <% end %>
+      <%= link_to edit_animal_placement_path(@animal_placement), class: button_class(theme:"primary") do %>
+      Edit
+      <% end %>
+    </div>
+  </div>
+
+  <ul class="text-slate-700">
+      <li>
+        <p class="font-semibold">Room:</p>
+        <p><%= @animal_placement.room %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Location:</p>
+        <p><%= @animal_placement.location %></p>
+      </li>
+  </ul>
+</div>

@@ -1,0 +1,2 @@
+module AnimalPlacementsHelper
+end

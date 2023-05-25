@@ -1,0 +1,30 @@
+<%= form_with(model: animal_placement) do |form| %>
+<% if animal_placement.errors.any? %>
+<div id="error_explanation" class="bg-red-50 p-6 rounded text-red-800">
+  <h2 class="text-lg font-semibold mb-3"><%= pluralize(animal_placement.errors.count, "error") %> prohibited this animal_placement from being saved:</h2>
+
+  <ul class="list-disc leading-relaxed">
+    <% animal_placement.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
+
+  <div class="mb-6">
+        <%= form.label :room, class: label_class %>
+          <%= form.text_field :room, class: input_class %>
+      </div>
+  <div class="mb-6">
+        <%= form.label :location, class: label_class %>
+          <%= form.text_field :location, class: input_class %>
+      </div>
+
+<%= form.submit class: button_class(theme: 'primary') %>
+
+<% if animal_placement.persisted? %>
+<%= link_to "Cancel", animal_placement, class: "text-neutral-700 underline inline-block ml-3" %>
+<% else %>
+<%= link_to "Cancel", animal_placements_path, class:  "text-neutral-700 underline inline-block ml-3" %>
+<% end %>
+<% end %>

@@ -1,0 +1,2 @@
+class AnimalPlacement < ApplicationRecord
+end
